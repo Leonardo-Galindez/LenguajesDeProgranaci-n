@@ -8,13 +8,13 @@ function resta ( n1 : integer; n2 : integer) : integer;
 begin
 resta := n1 - n2;
 end;
-function producto ( n1 : integer; n2 : integer) : integer;
+procedure producto ( n1 : integer; n2 : integer);
 begin
-producto := n1 * n2;
+writeln('producto:', n1 * n2);
 end;
-function division ( n1 : real; n2 : real) : real;
+procedure division ( n1 : integer; n2 : integer);
 begin
-division := n1 / n2;{ Consultar resultado } 
+writeln('division:', n1 / n2);{ Consultar resultado } 
 end;
 Begin 
 write('Ingrese numero:');
@@ -24,7 +24,6 @@ read(num2);
 
 writeln('suma:', suma(num1,num2));
 writeln('resta:', resta(num1,num2));
-writeln('producto:', producto(num1,num2));
-writeln('division:',  division(num1,num2));
-
+division(num1,num2);
+producto(num1,num2);
 End.
