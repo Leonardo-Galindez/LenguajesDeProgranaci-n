@@ -26,7 +26,7 @@ writeln('Suma--------------1');
 writeln('Resta-------------2');
 writeln('Producto----------3');
 writeln('Division----------4');
-write('Ingrese opcion');
+write('Ingrese opcion:');
 read(opcion);
 case opcion of
     1: 
