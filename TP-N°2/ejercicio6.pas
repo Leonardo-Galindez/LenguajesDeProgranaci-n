@@ -1,5 +1,6 @@
 Program ejercicio2;
 Var num1 , num2 ,opcion: integer ;
+{Var es una referencia (como arreglo) }
 function suma ( n1 : integer; n2 : integer) : integer;
 begin
 suma := n1 + n2;

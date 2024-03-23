@@ -1,4 +1,5 @@
 Program ejercicio4;
+{dan informacion de errorres antes que los no tan fuertemente tipado}
 Var num : real;
 function mayor(numero : Real): Boolean;
 begin
