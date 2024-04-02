@@ -1,4 +1,4 @@
-program OperacionesComplejas;
+program ejercicio26;
 
 type
   Complejo = record
