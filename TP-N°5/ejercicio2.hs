@@ -10,4 +10,4 @@ main = do --Entra a una secuencia
     let c = 1
     let d = 1
     let resultado = losCuatrosIguales a b c d
-    putStrLn $ "¿Los cuatro números son iguales? " ++ show resultado --imprime en consola
+    putStrLn $ "¿Los cuatro números son iguales? " ++ show resultado --imprime en consolaaaaa
