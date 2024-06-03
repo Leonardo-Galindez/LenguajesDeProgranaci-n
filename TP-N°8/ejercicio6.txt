@@ -1,0 +1,17 @@
+a- [1|2, 3, 4, 5, 6, 7]: Esta lista no es equivalente ya que el formato [Cabeza|Cola] se utiliza para separar la cabeza de la cola con una barra vertical (|). Aquí, el término 2, 3, 4, 5, 6, 7 no es una cola válida.
+
+b- [1, 2, 3, 4, 5, 6, 7|[]]: Esta lista es equivalente, ya que |[] representa una lista vacía y no afecta el contenido de la lista principal.
+
+c- [1|[2, 3, 4, 5, 6, 7]]: Esta lista es equivalente, ya que [2, 3, 4, 5, 6, 7] representa la cola de la lista principal.
+
+d- [1, 2, 3|[4|[5, 6, 7]]]: Esta lista es equivalente, ya que [4|[5, 6, 7]] representa la cola de la lista [3|[4|[5, 6, 7]]].
+
+e- [1|[2, 3, [4, 5, 6, 7]]]: Esta lista no es equivalente, ya que [4, 5, 6, 7] está anidada dentro de [2, 3, [4, 5, 6, 7]].
+
+f- [1, 2|[3, 4, 5, 6, 7, []]]: Esta lista no es equivalente, ya que [] está presente como un elemento separado en la cola, lo cual no ocurre en la lista de referencia.
+
+g- [1, 2|[3, 4, 5, 6, 7|[]]]: Esta lista es equivalente, ya que |[] representa una lista vacía y no afecta el contenido de la cola.
+
+h- [1, 2, [3, 4[5, 6, [7]]]]: Esta lista no es equivalente, ya que la estructura anidada [4[5, 6, [7]]] no coincide con la estructura plana de la lista de referencia.
+
+i- [1|[2|[3|[4|[5|[6|[7|[]]]]]]]]: Esta lista es equivalente, ya que cada elemento se agrega como cabeza de una nueva lista en cada nivel.

@@ -59,6 +59,16 @@ progenitor(carlos, cecilia).
 progenitor(javier, gabriel).
 progenitor(silvia, carlos).
 
+% Predicados de matrimonio
+casado(juan, maria).
+casado(eugenia, martin).
+casado(daniel, andrea).
+casado(cecilia, javier).
+casado(pedro, laura).
+casado(rodolfo, claudia).
+casado(norma, carlos).
+
+
 % Predicados de padre y madre
 padre(Padre, Hijo) :- progenitor(Padre, Hijo), masculino(Padre).
 madre(Madre, Hijo) :- progenitor(Madre, Hijo), femenino(Madre).
@@ -78,3 +88,17 @@ primo(Primo, Persona) :- progenitor(Padre1, Persona), progenitor(Padre2, Primo),
 % Predicado de ancestro
 ancestro(Antepasado, Descendiente) :- progenitor(Antepasado, Descendiente).
 ancestro(Antepasado, Descendiente) :- progenitor(Antepasado, Padre), ancestro(Padre, Descendiente).
+
+% Predicados de esposo y esposa
+esposo(Esposo, Esposa) :- casado(Esposo, Esposa), masculino(Esposo).
+esposa(Esposa, Esposo) :- casado(Esposa, Esposo), femenino(Esposa).
+
+% Predicado de soltero
+soltero(Persona) :- not(casado(Persona, _) ; casado(_, Persona)).
+
+% Predicado de amante
+amante(Amante, Persona) :- casado(Persona, Pareja), casado(Amante, Otro), Pareja \= Amante, Otro \= Persona.
+
+% Predicado de suegra y suegro
+suegra(Suegra, Persona) :- casado(Persona, Pareja), progenitor(Suegra, Pareja), femenino(Suegra).
+suegro(Suegro, Persona) :- casado(Persona, Pareja), progenitor(Suegro, Pareja), masculino(Suegro).

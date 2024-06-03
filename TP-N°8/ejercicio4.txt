@@ -1,0 +1,8 @@
+point(A,B) y point(1,s(2)): Unifican exitosamente con la asignación {A/1, B/s(2)}.
+pre(A,B) y pre(X,Y,Z): No unifican exitosamente debido a la diferencia en la aridad (número de argumentos).
+63+3 y esquina(X+Y) o esquina(corrientes+cordoba): No unifican exitosamente porque no son términos estructurados de Prolog.
+Dianadiana y 'Diana' _diana: Unifican exitosamente con la asignación {Dianadiana/'Diana' _diana}.
+_‘Diana goes south’ y X+1-Y*2(X+1)-(Y*2): No unifican exitosamente debido a la sintaxis incorrecta en el segundo término.
+plus(2,2) y 4: Unifican exitosamente con la asignación {plus(2,2)/4}.
+admira(X,padre(X)) y admira(padre(U),V): Unifican exitosamente con la asignación {X/padre(U), V/padre(U)}.
+p(q(-1,0),P2,P3) y p(P1, q(1,0),q(0,Y)): Unifican exitosamente con la asignación {P1/q(-1,0), P2/q(1,0), P3/q(0,Y)}.
