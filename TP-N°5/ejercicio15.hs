@@ -1,0 +1,1 @@
+duplicar :: String -> Int -> String

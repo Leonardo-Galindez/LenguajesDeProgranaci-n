@@ -1,0 +1,84 @@
+suma(s(0),s(s(0)),R).
+
+caso base
+
+suma(0,2,2).
+
+caso recursivo
+suma(1,2,3) :- suma(0,2,2)
+R=3
+
+2+4 = 6
+suma(s(s(0))),s(s(s(0))),R).
+
+caso base
+suma(0,2,2).
+
+1ra llamada
+caso recursivo
+suma(2,4,s(R1)) :- suma(1,4,5)
+R = 6
+
+2da llamada
+caso recursivo
+suma(1,4,s(R1)) :- suma(0,4,4)
+R1 = 5
+
+3ra llamada
+caso recursivo
+suma(0,4,4)
+R2 = 4
+
+------------------------------------------------------------------------------------------------------
+resta(s(s(s(0))),s(s(0)),R).
+
+caso base
+
+resta(3,0,R).
+
+1ra llamada
+caso resursivo
+resta(3,2,R) :- resta(2,1,1)
+R = 1
+2da llamada
+caso recursivo
+resta(2,1,R1) :- resta(1,0,1)
+R1 = 1
+3ra llamada
+caso base
+resta(1,0,1)
+R2 = 1
+-------------------------------------------------------------------------------------------------------
+multiplicacion(s(s(0)),s(s(0)),R)
+
+caso base
+
+multiplicacion(0, _,0)
+
+1ra llamada
+caso recursivo
+multiplicacion(2,2,R) :- multiplicacion(1,2,2), suma(2,2,4)
+R = 4
+2da llamada
+caso recursivo
+multiplicacion(1,2,R1) :- multiplicacion(0,2,0), suma(2,0,2)
+R1 = 2
+3ra llamada
+caso recursivo
+multiplicacion(0,2,R2)
+R2 = 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

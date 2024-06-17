@@ -1,0 +1,44 @@
+concatenar([1,2,3],[4,5],L)
+
+caso base 
+concatenar([],[4,5],[4,5])
+
+1ra llamada
+caso recursivo
+concatenar([1|2,3],[4,5],[1|[2,3,4,5]]) :- concatenar([2,3],[4,5],[2,3,4,5])
+R = [1,2,3,4,5]
+
+2da llamada
+caso recursivo
+concatenar([2|3],[4,5],[2|R1]) :- concatenar([3],[4,5],[3,4,5])
+R1 = [2,3,4,5]
+
+3ra llamada
+caso recursivo
+concatenar([3|[]],[4,5],[3|R2]) :- concatenar([],[4,5],[4,5])
+R2 = [3,4,5]
+
+4ta llamado
+caso base
+concatenar([],[4,5],R3)
+R3 = [4,5]
+
+--------------------------------------------------------------------------------------------------------
+pertenencia(2,[1,2,3]) es true
+
+caso base 
+pertenencia(2,[2|_])
+
+1ra llamada
+caso recursivo
+
+pertenencia(2,[_|[1,2,3]]) :- pertenencia(2,[1|2,3]).es true
+
+
+2da llamada
+caso recursivo
+pertenencia(2,[_|[2,3]]):-pertenencia(2,[2|3]) es true
+
+3ra llamada
+caso base
+pertenencia(2,[2|_]) es true

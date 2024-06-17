@@ -1,12 +1,12 @@
-a- [1|2, 3, 4, 5, 6, 7]: Esta lista no es equivalente ya que el formato [Cabeza|Cola] se utiliza para separar la cabeza de la cola con una barra vertical (|). Aquí, el término 2, 3, 4, 5, 6, 7 no es una cola válida.
+a- [1|2, 3, 4, 5, 6, 7]: Esta lista no es equivalente, ya que la coma , no es parte de la estructura de la lista en Prolog. La coma se utiliza para separar elementos en la lista, por lo que esta notación no es válida.
 
-b- [1, 2, 3, 4, 5, 6, 7|[]]: Esta lista es equivalente, ya que |[] representa una lista vacía y no afecta el contenido de la lista principal.
+b- [1, 2, 3, 4, 5, 6, 7|[]]: Esta lista es equivalente a [1, 2, 3, 4, 5, 6, 7]. La notación |[] al final indica que la lista de la cola está vacía, pero es una notación redundante en Prolog ya que la lista vacía se asume al final de una lista.
 
-c- [1|[2, 3, 4, 5, 6, 7]]: Esta lista es equivalente, ya que [2, 3, 4, 5, 6, 7] representa la cola de la lista principal.
+c- [1|[2, 3, 4, 5, 6, 7]]: Esta lista es equivalente a [1, 2, 3, 4, 5, 6, 7]. La notación [2, 3, 4, 5, 6, 7] indica que estos elementos son parte de la lista de la cola.
 
-d- [1, 2, 3|[4|[5, 6, 7]]]: Esta lista es equivalente, ya que [4|[5, 6, 7]] representa la cola de la lista [3|[4|[5, 6, 7]]].
+d- [1, 2, 3|[4|[5, 6, 7]]]: Esta lista es equivalente a [1, 2, 3, 4, 5, 6, 7]. La notación [4|[5, 6, 7]] indica que 4 es el primer elemento de la cola y [5, 6, 7] es el resto de la cola.
 
-e- [1|[2, 3, [4, 5, 6, 7]]]: Esta lista no es equivalente, ya que [4, 5, 6, 7] está anidada dentro de [2, 3, [4, 5, 6, 7]].
+e- [1|[2, 3, [4, 5, 6, 7]]]: Esta lista no es equivalente, ya que [4, 5, 6, 7] está anidado dentro de [2, 3, [...]], lo cual no coincide con la estructura plana de la lista [1, 2, 3, 4, 5, 6, 7].
 
 f- [1, 2|[3, 4, 5, 6, 7, []]]: Esta lista no es equivalente, ya que [] está presente como un elemento separado en la cola, lo cual no ocurre en la lista de referencia.
 

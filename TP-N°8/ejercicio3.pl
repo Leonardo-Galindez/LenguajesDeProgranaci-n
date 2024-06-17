@@ -3,7 +3,9 @@ sucesor(0, s(0)).
 sucesor(s(N), s(s(N))).
 
 % Operación de suma
-suma(0, N, N).
+% Caso base:
+suma(0, N, N)   .
+% Caso recursivo:
 suma(s(M), N, s(R)) :- suma(M, N, R).
 
 % Operación de resta
@@ -11,7 +13,7 @@ resta(N, 0, N).
 resta(s(M), s(N), R) :- resta(M, N, R).
 
 % Operación de multiplicación
-multiplicacion(0, _, 0).
+multiplicacion(0, _, 0). % "_" es cualquier cosa
 multiplicacion(s(M), N, R) :- multiplicacion(M, N, MR), suma(N, MR, R).
 
 % Operación de división

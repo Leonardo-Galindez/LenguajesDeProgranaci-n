@@ -1,0 +1,19 @@
+
+elemento(2,[1,2,3],S = 3)
+
+1ra llamada
+elemento(2,[1|2,3],S);K=2;K1 = 1;elemento(1,[2,3],S1=2)
+S=1+2=3
+2da llamada
+elemento(1,[2|3],S);K=1;K1 = 0;elemento(0,[3],S1=0);
+S=2+0;
+4ta llamada
+elemento(0,[3|[]],S);S=0
+
+------------------------------------------------------------------------------------
+sumar_listas([[1,2,3],[4]],L1)
+
+1ra llamada
+sumar_listas([[1,2,3]|[4]],[[Suma],[Sums]]):-sum_list([1,2,3],Suma),sumar_listas([4],Sums)
+
+sum_list([1|2,3],Suma):- sum_list([2,3],Suma1),Suma is 1 + Suma1

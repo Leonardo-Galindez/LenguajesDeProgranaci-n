@@ -68,6 +68,8 @@ casado(pedro, laura).
 casado(rodolfo, claudia).
 casado(norma, carlos).
 
+% Este predicado define la relación de paternidad. La regla se lee de la siguiente manera:
+%"Padre es el padre de Hijo si y solo si Padre es un progenitor de Hijo y Padre es masculino".
 
 % Predicados de padre y madre
 padre(Padre, Hijo) :- progenitor(Padre, Hijo), masculino(Padre).

@@ -6,3 +6,4 @@ on(bloque3, bloque4).
 % Regla para la clausura transitiva sobre la relación on.
 arriba(Bloque1, Bloque2) :- on(Bloque1, Bloque2).
 arriba(Bloque1, Bloque2) :- on(Bloque1, BloqueIntermedio), arriba(BloqueIntermedio, Bloque2).
+ 
